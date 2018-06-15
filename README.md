@@ -1,5 +1,6 @@
 # Ducky
-### Meet your online virtual rubber duck for debugging -- Ducky!
+
+### Meet your online virtual rubber duck for debugging -- Ducky! :baby_chick:
 
 A chrome extension to overlay a tiny rubber duck, as a virtual companion during rubber duck debugging.
 
