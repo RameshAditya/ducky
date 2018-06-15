@@ -1,0 +1,104 @@
+<!-- Copyright 2017 The Chromium Authors. All rights reserved.
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file. -->
+<html>
+  <head>
+    <title>Ducky</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #hydrateImage {
+        width: 150px;
+        margin: 5px;
+        /* -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease; */
+      
+
+      display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+
+      }
+
+      #hydrateImage:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left: calc(50% - 10px);
+  top: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #e1e1e1 transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+#hydrateImage:hover, #hydrateImage:focus, #hydrateImage:active {
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+}
+#hydrateImage:hover:before, #hydrateImage:focus:before, #hydrateImage:active:before {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+/*
+      #hydrateImage:hover {
+      	/* outline: #80DEEA dotted thin; */
+      	/* width: 145px; */
+
+      /*	-webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-5deg);
+       -o-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+      }
+
+      */
+
+      button {
+        margin: 5px;
+        outline: none;
+      }
+
+      button:hover {
+        outline: #80DEEA dotted thin;
+      }
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+  <body>
+  	<br>
+      <img src='./ducky.png' id='hydrateImage'>
+     
+      <p>I'm Ducky! <br> Debug with me!</p>
+      <!-- An Alarm delay of less than the minimum 1 minute will fire
+      in approximately 1 minute incriments if released -->
+      <hr>
+      <!-- <button id='sampleSecond' value='0.1'>Sample Second</button> -->
+      <button id='15min' value='15'>Quack in 15 mins</button>
+      <!-- <button id='30min' value='3'>3 Minutes</button> -->
+      <button id='cancelAlarm'>Cancel Alarm</button>
+   <!-- link to non-persistent background script -->
+   
+   <script src="popup.js"></script>
+  </body>
+</html>
