@@ -20,6 +20,7 @@ Ducky is also fairly shy, so don't try touching him with the mouse pointer or he
 
 ### Future Plans
 * Add interactivity and emoji support :slightly_smiling_face:
-- ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `Change Ducky's color`
+
+~- ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `Change Ducky's color`~ Done!
 * ~Add alarm (quack?) support as break reminders~ Done! :alarm_clock:
 * Add quick links to frequent websites
