@@ -1,8 +1,10 @@
 <h1 align="center">
-  <img src="ducky128.png"/>
-</h1>
+  <img src="ducky128.png"/><br>
+Ducky </h1>
 
-<h1 align="center"> Ducky </h1>
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/RameshAditya/ducky/pulls)
+[![Ducky says](https://img.shields.io/badge/Ducky%20says-%22Hi%22-yellow.svg)]()
+[![Publish status](https://img.shields.io/badge/Publish%20Status-Pending-orange.svg)]()
 
 ### Meet your online digital rubber duck for companionship & debugging -- Ducky! :baby_chick:
 
