@@ -12,6 +12,15 @@
     "default_title": "Ducky Quack",
     "default_popup": "popup.html"
   },
+  "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+Y",
+          "mac": "MacCtrl+Shift+Y"
+        },
+        "description": "Opens Ducky"
+      }
+    },
   "icons": {
     "16": "ducky16.png",
     "32": "ducky32.png",
