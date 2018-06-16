@@ -3,22 +3,89 @@ Use of this source code is governed by a BSD-style license that can be
 found in the LICENSE file. -->
 <html>
   <head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
     <title>Ducky</title>
     <style>
+
+    @-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+
+
+
       body {
         text-align: center;
       }
 
       #hydrateImage {
-        width: 150px;
+        width: 130px;
         margin: 5px;
-        /* -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease; */
       
-
       display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -32,7 +99,15 @@ found in the LICENSE file. -->
 
       }
 
-      #hydrateImage:before {
+      #hydrateImage:hover
+{
+        -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+}
+
+      /* #hydrateImage:before {
   position: absolute;
   z-index: -1;
   content: '';
@@ -55,19 +130,7 @@ found in the LICENSE file. -->
   transform: translateY(-10px);
 }
 
-/*
-      #hydrateImage:hover {
-      	/* outline: #80DEEA dotted thin; */
-      	/* width: 145px; */
-
-      /*	-webkit-transform: rotate(-10deg);
-     -moz-transform: rotate(-5deg);
-       -o-transform: rotate(-5deg);
-      -ms-transform: rotate(-5deg);
-          transform: rotate(-5deg);
-      }
-
-      */
+*/
 
       button {
         margin: 5px;
@@ -75,7 +138,8 @@ found in the LICENSE file. -->
       }
 
       button:hover {
-        outline: #80DEEA dotted thin;
+       /* outline: #80DEEA dotted thin; */
+       background:#999;
       }
     </style>
     <!--
@@ -112,8 +176,8 @@ found in the LICENSE file. -->
             </a>
         </td>                                       
         <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
-            <a href="http://www.google.com/" style="color: #ffffff;" target="_blank">
-            <img src="google.png" alt="Google" width="20" height="20" style="display: inline-block;" border="0" />
+            <a href="http://www.codepen.io/" style="color: #ffffff;" target="_blank">
+            <img src="codepen.png" alt="Codepen" width="20" height="20" style="display: inline-block;" border="0" />
             </a>
         </td>
         <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
@@ -123,6 +187,24 @@ found in the LICENSE file. -->
         </td>
     </tr>
 </table>
+
+<div id="search">
+<form method="get" action="http://www.google.com/search?q=" target="_blank">
+<div style="border:0px solid black;padding:2px;width:20em;">
+<table border="0" cellpadding="0">
+<tr><td>
+<input type="text" name="q" size="20" maxlength="255" value=""<textarea placeholder=" Search Google!" autocomplete="off"></textarea> 
+
+<!-- 
+</td>
+</tr>
+<tr>
+<td> -->
+    
+    <input type="submit" value="Search" /></td></tr>
+</table>
+</div>
+
    <script src="popup.js"></script>
   </body>
 </html>
