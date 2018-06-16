@@ -18,7 +18,16 @@ Ducky is working on his memory and remembers the links to developer-friendly sit
 
 Ducky is also fairly shy, so don't try touching him with the mouse pointer or he may try dodging you. :wink:
 
+## Set-Up Instructions
 
+So you too want a Ducky of your own, eh?
+
+It's easy! 
+* Download the contents of this repository, and then go to ```chrome://extensions```
+* Enable Developer Mode, if you haven't.
+* Select ```Load Unpacked```
+* Find the folder that contains all the files in this repository and select it.
+* Ta-da! Ducky has arrived!
 
 ### Future Plans
 * Add interactivity and emoji support :slightly_smiling_face:
