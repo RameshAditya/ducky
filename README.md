@@ -1,4 +1,8 @@
-# Ducky
+<h1 align="center">
+  <img src="ducky128.png"/>
+</h1>
+
+<h1 align="center"> Ducky </h1>
 
 ### Meet your online digital rubber duck for companionship & debugging -- Ducky! :baby_chick:
 
