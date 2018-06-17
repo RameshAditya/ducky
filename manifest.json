@@ -22,9 +22,9 @@
       }
     },
   "icons": {
-    "16": "ducky16.png",
-    "32": "ducky32.png",
-    "48": "ducky48.png",
-    "128": "ducky128.png"
+    "16": "resources/img/ducky16.png",
+    "32": "resources/img/ducky32.png",
+    "48": "resources/img/ducky48.png",
+    "128": "resources/img/ducky128.png"
   }
 }

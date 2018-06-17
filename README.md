@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="ducky128.png"/><br>
+  <img src="resources/img/ducky128.png"/><br>
 Ducky </h1>
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/RameshAditya/ducky/pulls)
@@ -10,11 +10,13 @@ Ducky </h1>
 
 A chrome extension to overlay a tiny, adorable rubber duck, as a digital companion during rubber duck debugging and general development work. Why? 'cause who doesn't want a cute duck on their browser.
 
-![](demo.gif)
+![](github-resources/demo.gif)
 
 -----------------------
 ## Are you new to rubber duck debugging?
-<img src='duckmeme.jpg' width="350px"/>
+<p align="center">
+  <img src="github-resources/duckmeme.jpg">
+</p>
 
 Meet **Ducky**, your adorable digital companion whom you can talk to, and rubber duck debug with. 
 
@@ -44,3 +46,4 @@ It's easy!
 * Allow users to add their own websites as quicklinks
 * Retrieve Google Search results within extension window for convenience and speed
 * Add Google Keep and Evernote support for quick note-taking.
+* Add pomodoro-style timer?

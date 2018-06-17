@@ -1,210 +1,53 @@
-<!-- Copyright 2017 The Chromium Authors. All rights reserved.
-Use of this source code is governed by a BSD-style license that can be
-found in the LICENSE file. -->
+<!doctype html>
 <html>
-  <head>
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="-1">
-    <title>Ducky</title>
-    <style>
+    <head>
+        <title>Ducky</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <img src="resources/img/ducky.png" id="duckyImage">
+        
+        <p>My name's Ducky!</p>
+        <p>Debug with me!</p>
 
-    @-webkit-keyframes swing
-{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-       transform: translateX(-5px);
-    } 
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-@keyframes swing
-{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
-    }
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
+        <hr>
 
+        <div class="controls">
+            <button class="controls__button" id="15min" value="15">Quack in 15 mins</button>
+            <button class="controls__button" id="cancelAlarm">Cancel Alarm</button>
+        </div>
 
+        <div class="checkbox">
+            <input type="checkbox" id="sound" name="sound">
+            <label class="checkbox__label" for="sound">Play sound</label>
+        </div>
 
-
-      body {
-        text-align: center;
-      }
-
-      #hydrateImage {
-        width: 130px;
-        margin: 5px;
-      
-      display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-
-      }
-
-      #hydrateImage:hover
-{
-        -webkit-animation: swing 1s ease;
-        animation: swing 1s ease;
-        -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
-}
-
-      /* #hydrateImage:before {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  left: calc(50% - 10px);
-  top: 0;
-  border-style: solid;
-  border-width: 0 10px 10px 10px;
-  border-color: transparent transparent #e1e1e1 transparent;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-#hydrateImage:hover, #hydrateImage:focus, #hydrateImage:active {
-  -webkit-transform: translateY(10px);
-  transform: translateY(10px);
-}
-#hydrateImage:hover:before, #hydrateImage:focus:before, #hydrateImage:active:before {
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
-}
-
-*/
-
-      button {
-        margin: 5px;
-        outline: none;
-      }
-
-      button:hover {
-       /* outline: #80DEEA dotted thin; */
-       background:#999;
-      }
-    </style>
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-  </head>
-  <body>
-  	<br>
-      <img src='./ducky.png' id='hydrateImage'>
-     
-      <p>My name's Ducky! <br> Debug with me!</p>
-      <!-- An Alarm delay of less than the minimum 1 minute will fire
-      in approximately 1 minute incriments if released -->
-      <hr>
-      <!-- <button id='sampleSecond' value='0.1'>Sample Second</button> -->
-      <button id='15min' value='15'>Quack in 15 mins</button>
-      <!-- <button id='30min' value='3'>3 Minutes</button> -->
-      <button id='cancelAlarm'>Cancel Alarm</button>
-   <!-- link to non-persistent background script -->
-   <table width="20" align="center" border="0" cellpadding="0" cellspacing="10">
-    <tr>
-      <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
-            <a href="http://www.stackoverflow.com/" style="color: #ffffff;" target="_blank">
-            <img src="stackoverflow.png" alt="Stack Overflow" width="25" height="25" style="display: inline-block;" border="0" />
+        <div class="social-links">
+            <a class="social-links__link" href="https://stackoverflow.com" target="_blank">
+                <img src="resources/img/stackoverflow.png" alt="StackOverflow" title="StackOverflow" />
             </a>
-        </td>   
 
-        <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
-            <a href="http://www.github.com/" style="color: #ffffff;" target="_blank">
-            <img src="github.png" alt="GitHub" width="25" height="25" style="display: inline-block;" border="0" />
+            <a class="social-links__link" href="https://github.com" target="_blank">
+                <img src="resources/img/github.png" alt="GitHub" title="GitHub" />
             </a>
-        </td>                                       
-        <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
-            <a href="http://www.codepen.io/" style="color: #ffffff;" target="_blank">
-            <img src="codepen.png" alt="Codepen" width="20" height="20" style="display: inline-block;" border="0" />
+
+            <a class="social-links__link" href="https://codepen.io" target="_blank">
+                <img src="resources/img/codepen.png" alt="CodePen" title="CodePen" />
             </a>
-        </td>
-        <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
-            <a href="http://www.reddit.com/" style="color: #ffffff;" target="_blank">
-            <img src="reddit.png" alt="Reddit" width="25" height="25" style="display: inline-block;" border="0" />
+
+            <a class="social-links__link" href="https://reddit.com" target="_blank">
+                <img src="resources/img/reddit.png" alt="Reddit" title="Reddit" />
             </a>
-        </td>
-    </tr>
-</table>
+        </div>
 
-<div id="search">
-<form method="get" action="http://www.google.com/search?q=" target="_blank">
-<div style="border:0px solid black;padding:2px;width:20em;">
-<table border="0" cellpadding="0">
-<tr><td>
-<input type="text" name="q" size="20" maxlength="255" value=""<textarea placeholder=" Search Google!" autocomplete="off"></textarea> 
-
-<!-- 
-</td>
-</tr>
-<tr>
-<td> -->
-    
-    <input type="submit" value="Search" /></td></tr>
-</table>
-</div>
-
-   <script src="popup.js"></script>
-  </body>
+        <div class="search">
+            <form action="http://www.google.com/search" target="_blank">
+                <textarea autocomplete="off" name="q"></textarea>
+                <button type="submit" class="controls__button search__submit">Search in Google</button>
+            </form>
+        </div>
+        
+        <audio id="quack" src="resources/audio/quack.mp3"></audio>
+        <script src="popup.js"></script>
+    </body>
 </html>

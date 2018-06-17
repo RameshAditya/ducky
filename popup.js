@@ -1,25 +1,43 @@
-// Copyright 2017 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
 'use strict';
 
+const quack = document.getElementById('quack');
+
+function loadSettings() {
+    chrome.storage.sync.get({
+        soundEnabled: true
+    }, function(items) {
+        document.getElementById('sound').checked = items.soundEnabled;
+    });
+}
+
+function playQuack() {
+    quack.play();
+}
+
 function setAlarm(event) {
-  let minutes = parseFloat(event.target.value);
-  chrome.browserAction.setBadgeText({text: 'ON'});
-  chrome.alarms.create({delayInMinutes: minutes});
-  chrome.storage.sync.set({minutes: minutes});
-  window.close();
+    let minutes = parseFloat(event.target.value);
+
+    chrome.browserAction.setBadgeText({text: 'ON'});
+    chrome.alarms.create({delayInMinutes: minutes});
+    chrome.storage.sync.set({minutes: minutes});
+
+    window.close();
 }
 
 function clearAlarm() {
-  chrome.browserAction.setBadgeText({text: ''});
-  chrome.alarms.clearAll();
-  window.close();
+    chrome.browserAction.setBadgeText({text: ''});
+    chrome.alarms.clearAll();
+    window.close();
 }
 
-//An Alarm delay of less than the minimum 1 minute will fire
-// in approximately 1 minute incriments if released
-//document.getElementById('sampleSecond').addEventListener('click', setAlarm);
+function setSoundSetting(event) {
+    chrome.storage.sync.set({
+        soundEnabled: event.target.checked
+    });
+}
+
+document.addEventListener('DOMContentLoaded', loadSettings);
+document.getElementById('duckyImage').addEventListener('click', playQuack);
 document.getElementById('15min').addEventListener('click', setAlarm);
-//document.getElementById('30min').addEventListener('click', setAlarm);
 document.getElementById('cancelAlarm').addEventListener('click', clearAlarm);
+document.getElementById('sound').addEventListener('change', setSoundSetting)
