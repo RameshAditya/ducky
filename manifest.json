@@ -1,0 +1,30 @@
+{
+  "name": "Ducky",
+  "description": "Digital Companion for Developers",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["alarms", "notifications", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Ducky Quack",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+Y",
+          "mac": "MacCtrl+Shift+Y"
+        },
+        "description": "Opens Ducky"
+      }
+    },
+  "icons": {
+    "16": "resources/img/ducky16.png",
+    "32": "resources/img/ducky32.png",
+    "48": "resources/img/ducky48.png",
+    "128": "resources/img/ducky128.png"
+  }
+}

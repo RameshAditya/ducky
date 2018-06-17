@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ducky</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <img src="resources/img/ducky.png" id="duckyImage">
+        
+        <p>My name's Ducky!</p>
+        <p>Debug with me!</p>
+
+        <hr>
+
+        <div class="controls">
+            <button class="controls__button" id="15min" value="15">Quack in 15 mins</button>
+            <button class="controls__button" id="cancelAlarm">Cancel Alarm</button>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="sound" name="sound">
+            <label class="checkbox__label" for="sound">Play sound</label>
+        </div>
+
+        <div class="social-links">
+            <a class="social-links__link" href="https://stackoverflow.com">
+                <img src="resources/img/stackoverflow.png" alt="Stack Overflow" />
+            </a>
+
+            <a class="social-links__link" href="https://github.com">
+                <img src="resources/img/github.png" alt="GitHub" />
+            </a>
+
+            <a class="social-links__link" href="https://codepen.io">
+                <img src="resources/img/codepen.png" alt="CodePen" />
+            </a>
+
+            <a class="social-links__link" href="https://reddit.com">
+                <img src="resources/img/reddit.png" alt="Reddit" />
+            </a>
+        </div>
+
+        <div class="search">
+            <form action="http://www.google.com/search" target="_blank">
+                <textarea autocomplete="off" name="q"></textarea>
+                <button type="submit" class="controls__button search__submit">Search in Google</button>
+            </form>
+        </div>
+        
+        <audio id="quack" src="resources/audio/quack.mp3"></audio>
+        <script src="popup.js"></script>
+    </body>
+</html>
