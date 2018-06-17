@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="ducky128.png"/><br>
+  <img src="resources/img/ducky128.png"/><br>
 Ducky </h1>
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/RameshAditya/ducky/pulls)
