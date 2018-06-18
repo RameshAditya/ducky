@@ -13,6 +13,13 @@ A chrome extension to overlay a tiny, adorable rubber duck, as a digital compani
 ![](github-resources/demo.gif)
 
 -----------------------
+
+## Contents
+- [What is rubber duck debugging?](#are-you-new-to-rubber-duck-debugging)
+- [Set-Up Instructions](#set-up-instructions)
+- [Ducky on other Browsers](#other-browsers)
+- [Future Plans](#future-plans)
+
 ## Are you new to rubber duck debugging?
 <p align="center">
   <img src="github-resources/duckmeme.jpg">
@@ -37,7 +44,12 @@ It's easy!
 * Find the folder that contains all the files in this repository and select it.
 * Ta-da! Ducky has arrived!
 
-### Future Plans
+## Other browsers
+* (Experimental) Mozilla Firefox
+  * Refer - https://github.com/RameshAditya/ducky/issues/4#issuecomment-397966773 for instructions on installation on Firefox
+  (thanks @<a href="https://github.com/Nibot1">Nibot1</a> )
+
+## Future Plans
 * Add interactivity and emoji support :slightly_smiling_face:
 
 ~- ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `Change Ducky's color`~ Done!
