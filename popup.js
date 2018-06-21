@@ -1,6 +1,7 @@
 'use strict';
 
 const quack = document.getElementById('quack');
+const duckTexts = ["Hello World", "Have you tried turning it off and on again?", "Could it have something to do with timezones?","What assumptions are you making?","Quack"];
 
 function loadSettings() {
     chrome.storage.sync.get({
@@ -11,9 +12,13 @@ function loadSettings() {
 }
 
 function playQuack() {
-    //quack.play();
-    chrome.tts.stop();
-    chrome.tts.speak("Hello World");
+    quack.play();
+}
+
+function sayText() {
+    var position = Math.floor(Math.random() * duckTexts.length);
+    //chrome.tts.stop();
+    chrome.tts.speak(duckTexts[position].toString(), {'lang': 'en-US', 'rate': 1.5});
 }
 
 function setAlarm(event) {
@@ -39,7 +44,7 @@ function setSoundSetting(event) {
 }
 
 document.addEventListener('DOMContentLoaded', loadSettings);
-document.getElementById('duckyImage').addEventListener('click', playQuack);
+document.getElementById('duckyImage').addEventListener('click', sayText);
 document.getElementById('15min').addEventListener('click', setAlarm);
 document.getElementById('cancelAlarm').addEventListener('click', clearAlarm);
 document.getElementById('sound').addEventListener('change', setSoundSetting)
