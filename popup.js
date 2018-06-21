@@ -11,7 +11,9 @@ function loadSettings() {
 }
 
 function playQuack() {
-    quack.play();
+    //quack.play();
+    chrome.tts.stop();
+    chrome.tts.speak("Hello World");
 }
 
 function setAlarm(event) {
