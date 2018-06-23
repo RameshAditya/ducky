@@ -36,8 +36,20 @@ function setSoundSetting(event) {
     });
 }
 
+function searchGoogle() {
+    window.location.href = "https://www.google.com/search?q=" + document.getElementById('searchTextInput').value.replace(' ', '+');
+    console.log("https://www.google.com/search?q=" + document.getElementById('searchTextArea').value.replace(' ', '+'));
+}
+
 document.addEventListener('DOMContentLoaded', loadSettings);
 document.getElementById('duckyImage').addEventListener('click', playQuack);
 document.getElementById('15min').addEventListener('click', setAlarm);
 document.getElementById('cancelAlarm').addEventListener('click', clearAlarm);
-document.getElementById('sound').addEventListener('change', setSoundSetting)
+document.getElementById('sound').addEventListener('change', setSoundSetting);
+document.getElementById('searchButton').addEventListener('click',searchGoogle);
+document.getElementById('searchTextInput').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        searchGoogle();
+        return;
+    }
+}, false);
