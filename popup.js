@@ -1,6 +1,7 @@
 'use strict';
 
 const quack = document.getElementById('quack');
+const duckTexts = ["Hello World", "Have you tried turning it off and on again?", "Could it have something to do with timezones?","What assumptions are you making?","Quack"];
 
 function loadSettings() {
     chrome.storage.sync.get({
