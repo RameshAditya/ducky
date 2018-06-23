@@ -40,4 +40,4 @@ document.addEventListener('DOMContentLoaded', loadSettings);
 document.getElementById('duckyImage').addEventListener('click', playQuack);
 document.getElementById('15min').addEventListener('click', setAlarm);
 document.getElementById('cancelAlarm').addEventListener('click', clearAlarm);
-document.getElementById('sound').addEventListener('change', setSoundSetting)
+document.getElementById('sound').addEventListener('change', setSoundSetting);
