@@ -12,6 +12,7 @@ function loadSettings() {
 }
 
 function playQuack() {
+    //var position = Math.floor(Math.random() * duckTexts.length);
     quack.play();
 }
 
