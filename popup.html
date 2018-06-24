@@ -1,53 +1,68 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Ducky</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <img src="resources/img/ducky.png" id="duckyImage">
-        
-        <p>My name's Ducky!</p>
-        <p>Debug with me!</p>
 
-        <hr>
+<head>
+    <title>Ducky</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="resources/js/jquery.js"></script>
+</head>
 
-        <div class="controls">
-            <button class="controls__button" id="15min" value="15">Quack in 15 mins</button>
-            <button class="controls__button" id="cancelAlarm">Cancel Alarm</button>
-        </div>
+<body>
+    <img src="resources/img/ducky.png" id="duckyImage">
 
-        <div class="checkbox">
-            <input type="checkbox" id="sound" name="sound">
-            <label class="checkbox__label" for="sound">Play sound</label>
-        </div>
+    <p>My name's Ducky!</p>
+    <p>Debug with me!</p>
 
-        <div class="social-links">
-            <a class="social-links__link" href="https://stackoverflow.com" target="_blank">
-                <img src="resources/img/stackoverflow.png" alt="StackOverflow" title="StackOverflow" />
-            </a>
+    <hr>
 
-            <a class="social-links__link" href="https://github.com" target="_blank">
-                <img src="resources/img/github.png" alt="GitHub" title="GitHub" />
-            </a>
+    <div class="controls">
+        <button class="controls__button" id="15min" value="15">Quack in 15 mins</button>
+        <button class="controls__button" id="cancelAlarm">Cancel Alarm</button>
+    </div>
 
-            <a class="social-links__link" href="https://codepen.io" target="_blank">
-                <img src="resources/img/codepen.png" alt="CodePen" title="CodePen" />
-            </a>
+    <div class="checkbox">
+        <input type="checkbox" id="sound" name="sound">
+        <label class="checkbox__label" for="sound">Play sound</label>
+    </div>
 
-            <a class="social-links__link" href="https://reddit.com" target="_blank">
-                <img src="resources/img/reddit.png" alt="Reddit" title="Reddit" />
-            </a>
-        </div>
+    <div class="social-links">
+        <a class="social-links__link" href="https://stackoverflow.com" target="_blank">
+            <img src="resources/img/stackoverflow.png" alt="StackOverflow" title="StackOverflow" />
+        </a>
 
-        <div class="search">
-            <form action="http://www.google.com/search" target="_blank">
-                <textarea autocomplete="off" name="q"></textarea>
-                <button type="submit" class="controls__button search__submit">Search in Google</button>
-            </form>
-        </div>
-        
-        <audio id="quack" src="resources/audio/quack.mp3"></audio>
-        <script src="popup.js"></script>
-    </body>
+        <a class="social-links__link" href="https://github.com" target="_blank">
+            <img src="resources/img/github.png" alt="GitHub" title="GitHub" />
+        </a>
+
+        <a class="social-links__link" href="https://codepen.io" target="_blank">
+            <img src="resources/img/codepen.png" alt="CodePen" title="CodePen" />
+        </a>
+
+        <a class="social-links__link" href="https://reddit.com" target="_blank">
+            <img src="resources/img/reddit.png" alt="Reddit" title="Reddit" />
+        </a>
+        <br>
+        <a id="shortcut1" class="social-links__link" target="_blank">
+            <img id="favicon1" width="64" height="64">
+        </a>
+        <a id="shortcut2" class="social-links__link" target="_blank">
+            <img id="favicon2" width="64" height="64">
+        </a>
+        <a id="shortcut3" class="social-links__link" target="_blank">
+            <img id="favicon3" width="64" height="64">
+        </a>
+        <a id="shortcut4" class="social-links__link" target="_blank">
+            <img id="favicon4" width="64" height="64">
+        </a>
+    </div>
+
+    <div class="search">
+        <input type="text" id="searchTextInput"></input>
+        <button class="controls__button search__submit" id="searchButton">Search in Google</button>
+    </div>
+
+    <audio id="quack" src="resources/audio/quack.mp3"></audio>
+    <script src="popup.js"></script>
+</body>
+
 </html>
