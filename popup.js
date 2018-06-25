@@ -33,16 +33,16 @@ async function loadSettings() {
             document.getElementById('shortcut1').setAttribute('href', items.firstUrl);
         }
         if (items.secondUrl !== "") {
-            jQuery('#favicon2').attr('src', items.secondUrlIcon);
-            jQuery('#shortcut2').attr('href', items.secondUrl);
+            document.getElementById('favicon2').setAttribute('src', items.secondUrlIcon);
+            document.getElementById('shortcut2').setAttribute('href', items.secondUrl);
         }
         if (items.thirdUrl !== "") {
-            jQuery('#favicon3').attr('src', items.thirdUrlIcon);
-            jQuery('#shortcut3').attr('href', items.thirdUrl);
+            document.getElementById('favicon3').setAttribute('src', items.thirdUrlIcon);
+            document.getElementById('shortcut3').setAttribute('href', items.thirdUrl);
         }
         if (items.fourthUrl !== "") {
-            jQuery('#favicon4').attr('src', items.fourthUrlIcon);
-            jQuery('#shortcut4').attr('href', items.fourthUrl);
+            document.getElementById('favicon4').setAttribute('src', items.fourthUrlIcon);
+            document.getElementById('shortcut4').setAttribute('href', items.fourthUrl);
         }
     });
 }
