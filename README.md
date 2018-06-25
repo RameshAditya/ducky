@@ -44,6 +44,4 @@ It's easy!
 * ~Add alarm (quack?) support as break reminders~ Done! :alarm_clock:
 * ~Add quick links to frequent websites~ Done! 
 * Allow users to add their own websites as quicklinks
-* Retrieve Google Search results within extension window for convenience and speed
-* Add Google Keep and Evernote support for quick note-taking.
 * Add pomodoro-style timer?
