@@ -1,8 +1,8 @@
 'use strict';
 
 const quack = document.getElementById('quack');
-const duckTexts = ["Hello World", "Have you tried turning it off and on again?", "Could it have something to do with timezones?", "What assumptions are you making?", "Quack"];
-var searchResultTarget = true;
+//const duckTexts = ["Hello World", "Have you tried turning it off and on again?", "Could it have something to do with timezones?", "What assumptions are you making?", "Quack"];
+var searchResultTarget = false;
 var firstUrl = "";
 var firstUrlIcon = "";
 var secondUrl = "";
