@@ -36,6 +36,11 @@
     "32": "resources/img/ducky32.png",
     "48": "resources/img/ducky48.png",
     "128": "resources/img/ducky128.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "extension@example.com",
+      "strict_min_version": "42.0"
+    }
   }
-  
 }
