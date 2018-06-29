@@ -55,5 +55,5 @@ It's easy!
 ~- ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `Change Ducky's color`~ Done!
 * ~Add alarm (quack?) support as break reminders~ Done! :alarm_clock:
 * ~Add quick links to frequent websites~ Done! 
-* Allow users to add their own websites as quicklinks
+* ~Allow users to add their own websites as quicklinks~ Done!
 * Add pomodoro-style timer?
