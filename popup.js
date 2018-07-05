@@ -1,7 +1,7 @@
 'use strict';
 
 const quack = document.getElementById('quack');
-//const duckTexts = ["Hello World", "Have you tried turning it off and on again?", "Could it have something to do with timezones?", "What assumptions are you making?", "Quack"];
+const duckTexts = ["Hello World", "Have you tried turning it off and on again?", "Could it have something to do with timezones?", "What assumptions are you making?", "Quack"];
 var searchResultTarget = false;
 var firstUrl = "";
 var firstUrlIcon = "";
@@ -48,8 +48,32 @@ async function loadSettings() {
 }
 
 function playQuack() {
-    //var position = Math.floor(Math.random() * duckTexts.length);
+    // Search a random String fom the Array with Dev phrases
+    var position = Math.floor(Math.random() * duckTexts.length);
+    // get the div around the duckyImage
+    var imageDiv = document.getElementById('imageDiv');
+    // try to remove exsisting SpeechBubbles
+    try {
+        imageDiv.removeChild(document.getElementById('speechBubble'));
+    } catch (err) {
+        //console.log(err);
+    }
+    // get duckyImage by id
+    var duckyImage = document.getElementById('duckyImage');
+    // create new <p>
+    var speechBubble = document.createElement("p");
+    // set the id, class, Text of the <p>
+    speechBubble.id = "speechBubble";
+    speechBubble.className = "speech";
+    speechBubble.innerHTML = duckTexts[position];
+    // insert <p> before the duckyImage
+    imageDiv.insertBefore(speechBubble, duckyImage);
+    // play the Quack Sound
     quack.play();
+    // remove SpeechBubble after 5 secons
+    setTimeout(function () {
+        imageDiv.removeChild(speechBubble);
+    }, 5000);
 }
 
 function setAlarm(event) {
@@ -85,7 +109,7 @@ function setSoundSetting(event) {
 function searchGoogle() {
     if (searchResultTarget) {
         window.location.href = "https://www.google.com/search?q=" + document.getElementById('searchTextInput').value.replace(' ', '+');
-    }else{
+    } else {
         var win = window.open("https://www.google.com/search?q=" + document.getElementById('searchTextInput').value.replace(' ', '+'), '_blank');
         win.focus();
     }
