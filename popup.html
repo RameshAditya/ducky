@@ -4,28 +4,29 @@
 <head>
     <title>Ducky</title>
     <link rel="stylesheet" href="style.css">
-    <script src="resources/js/jquery.js"></script>
 </head>
 
 <body>
+    <div id="imageDiv">
     <img src="resources/img/ducky.png" id="duckyImage">
+    </div>
 
     <p>My name's Ducky!</p>
     <p>Debug with me!</p>
 
     <hr>
 
-    <div class="controls">
+    <div class="controls ">
         <button class="controls__button" id="15min" value="15">Quack in 15 mins</button>
         <button class="controls__button" id="cancelAlarm">Cancel Alarm</button>
     </div>
 
-    <div class="checkbox">
+    <div class="checkbox ">
         <input type="checkbox" id="sound" name="sound">
         <label class="checkbox__label" for="sound">Play sound</label>
     </div>
 
-    <div class="social-links">
+    <div class="social-links ">
         <a class="social-links__link" href="https://stackoverflow.com" target="_blank">
             <img src="resources/img/stackoverflow.png" alt="StackOverflow" title="StackOverflow" />
         </a>
@@ -57,7 +58,7 @@
     </div>
 
     <div class="search">
-        <input type="text" id="searchTextInput"></input>
+        <input type="text" id="searchTextInput" style="color: initial;"></input>
         <button class="controls__button search__submit" id="searchButton">Search in Google</button>
     </div>
 

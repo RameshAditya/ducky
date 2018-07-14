@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    background-color: #fff
 }
 
 @-webkit-keyframes swing {
@@ -63,7 +64,6 @@ body {
 #duckyImage {
     width: 130px;
     margin: 5px;
-
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -74,12 +74,10 @@ body {
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
-
 }
 
 #duckyImage:hover {
     cursor: pointer;
-
     -webkit-animation: swing 1s ease;
     animation: swing 1s ease;
     -webkit-animation-iteration-count: 1;
@@ -97,14 +95,11 @@ body {
     display: block;
     padding: 4px;
     margin: 4px 8px;
-
     font-family: Roboto, Verdana, sans-serif;
     font-size: 14px;
     font-weight: bold;
-
     background-color: white;
     color: #ffbe00;
-
     border: 2px #fee35e solid;
     border-radius: 6px;
 }
@@ -118,7 +113,6 @@ body {
 .social-links {
     width: 100%;
     margin: 6px;
-
     display: flex;
     justify-content: center;
 }
@@ -143,4 +137,26 @@ body {
     display: flex;
     align-items: center;
     padding: 4px;
+}
+
+/* Generated with https://leaverou.github.io/bubbly/ */
+.speech {
+    position: relative;
+    background: #fee35e;
+    border-radius: .4em;
+    font-size: 125%;
+}
+
+.speech:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #fee35e;
+    border-bottom: 0;
+    margin-left: -20px;
+    margin-bottom: -20px;
 }

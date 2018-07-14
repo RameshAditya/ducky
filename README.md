@@ -56,4 +56,5 @@ It's easy!
 * ~Add alarm (quack?) support as break reminders~ Done! :alarm_clock:
 * ~Add quick links to frequent websites~ Done! 
 * ~Allow users to add their own websites as quicklinks~ Done!
+* ~Show a Speechbubble with Debugging Tipps~ Done!
 * Add pomodoro-style timer?
