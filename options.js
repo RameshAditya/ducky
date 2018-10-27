@@ -1,5 +1,6 @@
 'use strict';
 // Saves options to chrome.storage
+//trying
 function save_options() {
     var searchResultTarget = document.getElementById('searchResultTarget').checked;
     var firstUrl = document.getElementById('firstUrl').value;
